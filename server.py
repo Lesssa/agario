@@ -301,156 +301,34 @@ while server_works:
 					if min_m_i==0:
 						if min_M_i==1:
 							coord_x=0
-							coord_y=new_l[1]
+							coord_y=-new_l[1]
 						else:
 							if min_M_i==2:
-								coord_x=new_l[2]
+								coord_x=-new_l[2]
 								coord_y=0
 							else:
 								if min_M_i==3:
-									coord_x=new_l[0]
-									coord_y=0
-								else:
 									coord_x=0
-									coord_y=new_l[3]
-					if min_m_i==1: # нет поворота
-						if ((i_max==0) and (i2_max==1)) or ((i_max==1) and (i2_max==0)):
-							coord_y = new_l[random.randint(0, 1)]
-							if (coord_y==new_l[1]):
-								coord_y=-coord_y
-							coord_x=0
-						else:
-							if ((i_max==0) and (i2_max==2)) or ((i_max==2) and (i2_max==0)):
-								coord_x = -new_l[2]
-								coord_y = new_l[0]
-							else:
-								if ((i_max==0) and (i2_max==3)) or ((i_max==3) and (i2_max==0)):
-									coord_x = new_l[3]
-									coord_y = new_l[0]
+									coord_y=new_l[0]
 								else:
-									if ((i_max==1) and (i2_max==2)) or ((i_max==2) and (i2_max==1)):
-										coord_x = -new_l[2]
-										coord_y = -new_l[1]
-									else:
-										if ((i_max==1) and (i2_max==3)) or ((i_max==3) and (i2_max==1)):
-											coord_x = new_l[3]
-											coord_y = -new_l[1]
-										else:
-											coord_x = new_l[random.randint(2, 3)]
-											if (coord_x==new_l[2]):
-												coord_x=-coord_x
-											coord_y=0
-					else:
-						if min_m_i==2: # поворот на 90 гр. вправо (по кругу)
-							if ((i_max==0) and (i2_max==1)) or ((i_max==1) and (i2_max==0)):
-								coord_y = new_l[random.randint(0, 1)]
-								if (coord_x==new_l[1]):
-									coord_x=-coord_x
+									coord_x=new_l[3]
+									coord_y=0
+					if min_M_i==0:
+						if min_m_i==1:
+							coord_x=0
+							coord_y=new_l[0]
+						else:
+							if min_m_i==2:
+								coord_x=new_l[3]
 								coord_y=0
 							else:
-								if ((i_max==0) and (i2_max==2)) or ((i_max==2) and (i2_max==0)):
-									coord_x = new_l[0]
-									coord_y = new_l[2]
-								else:
-									if ((i_max==0) and (i2_max==3)) or ((i_max==3) and (i2_max==0)):
-										coord_x = new_l[0]
-										coord_y = -new_l[3]
-									else:
-										if ((i_max==1) and (i2_max==2)) or ((i_max==2) and (i2_max==1)):
-											coord_x = -new_l[1]
-											coord_y = new_l[2]
-										else:
-											if ((i_max==1) and (i2_max==3)) or ((i_max==3) and (i2_max==1)):
-												coord_x = -new_l[1]
-												coord_y = -new_l[3]
-											else:
-												coord_y = new_l[random.randint(2, 3)]
-												if (coord_y==new_l[3]):
-													coord_y=-coord_y
-												coord_x=0
-						else:
-							if min_m_i==3: # поворот на 180 гр. (по кругу)
-								if ((i_max==0) and (i2_max==1)) or ((i_max==1) and (i2_max==0)):
-									coord_y = new_l[random.randint(0, 1)]
-									if (coord_y==new_l[0]):
-										coord_y=-coord_y
+								if min_m_i==3:
 									coord_x=0
+									coord_y=-new_l[1]
 								else:
-									if ((i_max==0) and (i2_max==2)) or ((i_max==2) and (i2_max==0)):
-										coord_x = new_l[2]
-										coord_y = -new_l[0]
-									else:
-										if ((i_max==0) and (i2_max==3)) or ((i_max==3) and (i2_max==0)):
-											coord_x = -new_l[3]
-											coord_y = -new_l[0]
-										else:
-											if ((i_max==1) and (i2_max==2)) or ((i_max==2) and (i2_max==1)):
-												coord_x = new_l[2]
-												coord_y = new_l[1]
-											else:
-												if ((i_max==1) and (i2_max==3)) or ((i_max==3) and (i2_max==1)):
-													coord_x = -new_l[3]
-													coord_y = new_l[1]
-												else:
-													coord_x = new_l[random.randint(2, 3)]
-													if (coord_x==new_l[3]):
-														coord_x=-coord_x
-													coord_y=0
-							else:
-								if min_m_i==4: # поворот на 90 гр. влево (по кругу)
-									if ((i_max==0) and (i2_max==1)) or ((i_max==1) and (i2_max==0)):
-										coord_y = new_l[random.randint(0, 1)]
-										if (coord_x==new_l[0]):
-											coord_x=-coord_x
-										coord_y=0
-									else:
-										if ((i_max==0) and (i2_max==2)) or ((i_max==2) and (i2_max==0)):
-											coord_x = -new_l[0]
-											coord_y = -new_l[2]
-										else:
-											if ((i_max==0) and (i2_max==3)) or ((i_max==3) and (i2_max==0)):
-												coord_x = -new_l[0]
-												coord_y = new_l[3]
-											else:
-												if ((i_max==1) and (i2_max==2)) or ((i_max==2) and (i2_max==1)):
-													coord_x = new_l[1]
-													coord_y = -new_l[2]
-												else:
-													if ((i_max==1) and (i2_max==3)) or ((i_max==3) and (i2_max==1)):
-														coord_x = new_l[1]
-														coord_y = new_l[3]
-													else:
-														coord_y = new_l[random.randint(2, 3)]
-														if (coord_y==new_l[2]):
-															coord_y=-coord_y
-														coord_x=0
-				else:
-					if(d==1):
-						#left
-						new_list.clear()
-						new_l.clear()
-						new_list = copy.deepcopy(sr_left)
-						new_l = copy.deepcopy(sr_left)
-						m_max = max(new_list)
-						i_max = new_list.index(max(new_list))
-						new_list[i_max] = 0
-						m2_max = max(new_list)
-						i2_max = new_list.index(max(new_list))
-						if min_m_i==0:
-							if min_M_i==1:
-								coord_x=0
-								coord_y=new_l[1]
-							else:
-								if min_M_i==2:
-									coord_x=new_l[2]
+									coord_x=-new_l[2]
 									coord_y=0
-								else:
-									if min_M_i==3:
-										coord_x=new_l[0]
-										coord_y=0
-									else:
-										coord_x=0
-										coord_y=new_l[3]
+					else:
 						if min_m_i==1: # нет поворота
 							if ((i_max==0) and (i2_max==1)) or ((i_max==1) and (i2_max==0)):
 								coord_y = new_l[random.randint(0, 1)]
@@ -481,7 +359,7 @@ while server_works:
 						else:
 							if min_m_i==2: # поворот на 90 гр. вправо (по кругу)
 								if ((i_max==0) and (i2_max==1)) or ((i_max==1) and (i2_max==0)):
-									coord_x = new_l[random.randint(0, 1)]
+									coord_y = new_l[random.randint(0, 1)]
 									if (coord_x==new_l[1]):
 										coord_x=-coord_x
 									coord_y=0
@@ -526,7 +404,7 @@ while server_works:
 													coord_x = new_l[2]
 													coord_y = new_l[1]
 												else:
-													if ((i_max==1)) and (i2_max==3) or ((i_max==3) and (i2_max==1)):
+													if ((i_max==1) and (i2_max==3)) or ((i_max==3) and (i2_max==1)):
 														coord_x = -new_l[3]
 														coord_y = new_l[1]
 													else:
@@ -537,7 +415,7 @@ while server_works:
 								else:
 									if min_m_i==4: # поворот на 90 гр. влево (по кругу)
 										if ((i_max==0) and (i2_max==1)) or ((i_max==1) and (i2_max==0)):
-											coord_x = new_l[random.randint(0, 1)]
+											coord_y = new_l[random.randint(0, 1)]
 											if (coord_x==new_l[0]):
 												coord_x=-coord_x
 											coord_y=0
@@ -562,6 +440,160 @@ while server_works:
 															if (coord_y==new_l[2]):
 																coord_y=-coord_y
 															coord_x=0
+				else:
+					if(d==1):
+						#left
+						new_list.clear()
+						new_l.clear()
+						new_list = copy.deepcopy(sr_left)
+						new_l = copy.deepcopy(sr_left)
+						m_max = max(new_list)
+						i_max = new_list.index(max(new_list))
+						new_list[i_max] = 0
+						m2_max = max(new_list)
+						i2_max = new_list.index(max(new_list))
+						if min_m_i==0:
+							if min_M_i==1:
+								coord_x=0
+								coord_y=-new_l[1]
+							else:
+								if min_M_i==2:
+									coord_x=-new_l[2]
+									coord_y=0
+								else:
+									if min_M_i==3:
+										coord_x=0
+										coord_y=new_l[0]
+									else:
+										coord_x=new_l[3]
+										coord_y=0
+						if min_M_i==0:
+							if min_m_i==1:
+								coord_x=0
+								coord_y=new_l[0]
+							else:
+								if min_m_i==2:
+									coord_x=new_l[3]
+									coord_y=0
+								else:
+									if min_m_i==3:
+										coord_x=0
+										coord_y=-new_l[1]
+									else:
+										coord_x=-new_l[2]
+										coord_y=0
+						else:
+							if min_m_i==1: # нет поворота
+								if ((i_max==0) and (i2_max==1)) or ((i_max==1) and (i2_max==0)):
+									coord_y = new_l[random.randint(0, 1)]
+									if (coord_y==new_l[1]):
+										coord_y=-coord_y
+									coord_x=0
+								else:
+									if ((i_max==0) and (i2_max==2)) or ((i_max==2) and (i2_max==0)):
+										coord_x = -new_l[2]
+										coord_y = new_l[0]
+									else:
+										if ((i_max==0) and (i2_max==3)) or ((i_max==3) and (i2_max==0)):
+											coord_x = new_l[3]
+											coord_y = new_l[0]
+										else:
+											if ((i_max==1) and (i2_max==2)) or ((i_max==2) and (i2_max==1)):
+												coord_x = -new_l[2]
+												coord_y = -new_l[1]
+											else:
+												if ((i_max==1) and (i2_max==3)) or ((i_max==3) and (i2_max==1)):
+													coord_x = new_l[3]
+													coord_y = -new_l[1]
+												else:
+													coord_x = new_l[random.randint(2, 3)]
+													if (coord_x==new_l[2]):
+														coord_x=-coord_x
+													coord_y=0
+							else:
+								if min_m_i==2: # поворот на 90 гр. вправо (по кругу)
+									if ((i_max==0) and (i2_max==1)) or ((i_max==1) and (i2_max==0)):
+										coord_x = new_l[random.randint(0, 1)]
+										if (coord_x==new_l[1]):
+											coord_x=-coord_x
+										coord_y=0
+									else:
+										if ((i_max==0) and (i2_max==2)) or ((i_max==2) and (i2_max==0)):
+											coord_x = new_l[0]
+											coord_y = new_l[2]
+										else:
+											if ((i_max==0) and (i2_max==3)) or ((i_max==3) and (i2_max==0)):
+												coord_x = new_l[0]
+												coord_y = -new_l[3]
+											else:
+												if ((i_max==1) and (i2_max==2)) or ((i_max==2) and (i2_max==1)):
+													coord_x = -new_l[1]
+													coord_y = new_l[2]
+												else:
+													if ((i_max==1) and (i2_max==3)) or ((i_max==3) and (i2_max==1)):
+														coord_x = -new_l[1]
+														coord_y = -new_l[3]
+													else:
+														coord_y = new_l[random.randint(2, 3)]
+														if (coord_y==new_l[3]):
+															coord_y=-coord_y
+														coord_x=0
+								else:
+									if min_m_i==3: # поворот на 180 гр. (по кругу)
+										if ((i_max==0) and (i2_max==1)) or ((i_max==1) and (i2_max==0)):
+											coord_y = new_l[random.randint(0, 1)]
+											if (coord_y==new_l[0]):
+												coord_y=-coord_y
+											coord_x=0
+										else:
+											if ((i_max==0) and (i2_max==2)) or ((i_max==2) and (i2_max==0)):
+												coord_x = new_l[2]
+												coord_y = -new_l[0]
+											else:
+												if ((i_max==0) and (i2_max==3)) or ((i_max==3) and (i2_max==0)):
+													coord_x = -new_l[3]
+													coord_y = -new_l[0]
+												else:
+													if ((i_max==1) and (i2_max==2)) or ((i_max==2) and (i2_max==1)):
+														coord_x = new_l[2]
+														coord_y = new_l[1]
+													else:
+														if ((i_max==1)) and (i2_max==3) or ((i_max==3) and (i2_max==1)):
+															coord_x = -new_l[3]
+															coord_y = new_l[1]
+														else:
+															coord_x = new_l[random.randint(2, 3)]
+															if (coord_x==new_l[3]):
+																coord_x=-coord_x
+															coord_y=0
+									else:
+										if min_m_i==4: # поворот на 90 гр. влево (по кругу)
+											if ((i_max==0) and (i2_max==1)) or ((i_max==1) and (i2_max==0)):
+												coord_x = new_l[random.randint(0, 1)]
+												if (coord_x==new_l[0]):
+													coord_x=-coord_x
+												coord_y=0
+											else:
+												if ((i_max==0) and (i2_max==2)) or ((i_max==2) and (i2_max==0)):
+													coord_x = -new_l[0]
+													coord_y = -new_l[2]
+												else:
+													if ((i_max==0) and (i2_max==3)) or ((i_max==3) and (i2_max==0)):
+														coord_x = -new_l[0]
+														coord_y = new_l[3]
+													else:
+														if ((i_max==1) and (i2_max==2)) or ((i_max==2) and (i2_max==1)):
+															coord_x = new_l[1]
+															coord_y = -new_l[2]
+														else:
+															if ((i_max==1) and (i2_max==3)) or ((i_max==3) and (i2_max==1)):
+																coord_x = new_l[1]
+																coord_y = new_l[3]
+															else:
+																coord_y = new_l[random.randint(2, 3)]
+																if (coord_y==new_l[2]):
+																	coord_y=-coord_y
+																coord_x=0
 					else:
 						if(d==2):
 							#down
@@ -577,129 +609,145 @@ while server_works:
 							if min_m_i==0:
 								if min_M_i==1:
 									coord_x=0
-									coord_y=new_l[1]
+									coord_y=-new_l[1]
 								else:
 									if min_M_i==2:
-										coord_x=new_l[2]
+										coord_x=-new_l[2]
 										coord_y=0
 									else:
 										if min_M_i==3:
-											coord_x=new_l[0]
-											coord_y=0
-										else:
 											coord_x=0
-											coord_y=new_l[3]
-							if min_m_i==1: # нет поворота
-								if ((i_max==0) and (i2_max==1)) or ((i_max==1) and (i2_max==0)):
-									coord_y = new_l[random.randint(0, 1)]
-									if (coord_y==new_l[1]):
-										coord_y=-coord_y
-									coord_x=0
-								else:
-									if ((i_max==0) and (i2_max==2)) or ((i_max==2) and (i2_max==0)):
-										coord_x = -new_l[2]
-										coord_y = new_l[0]
-									else:
-										if ((i_max==0) and (i2_max==3)) or ((i_max==3) and (i2_max==0)):
-											coord_x = new_l[3]
-											coord_y = new_l[0]
+											coord_y=new_l[0]
 										else:
-											if ((i_max==1) and (i2_max==2)) or ((i_max==2) and (i2_max==1)):
-												coord_x = -new_l[2]
-												coord_y = -new_l[1]
-											else:
-												if ((i_max==1) and (i2_max==3)) or ((i_max==3) and (i2_max==1)):
-													coord_x = new_l[3]
-													coord_y = -new_l[1]
-												else:
-													coord_x = new_l[random.randint(2, 3)]
-													if (coord_x==new_l[2]):
-														coord_x=-coord_x
-													coord_y=0
-							else:
-								if min_m_i==2: # поворот на 90 гр. вправо (по кругу)
-									if ((i_max==0) and (i2_max==1)) or ((i_max==1) and (i2_max==0)):
-										coord_x = new_l[random.randint(0, 1)]
-										if (coord_x==new_l[1]):
-											coord_x=-coord_x
+											coord_x=new_l[3]
+											coord_y=0
+							if min_M_i==0:
+								if min_m_i==1:
+									coord_x=0
+									coord_y=new_l[0]
+								else:
+									if min_m_i==2:
+										coord_x=new_l[3]
 										coord_y=0
 									else:
+										if min_m_i==3:
+											coord_x=0
+											coord_y=-new_l[1]
+										else:
+											coord_x=-new_l[2]
+											coord_y=0
+							else:
+								if min_m_i==1: # нет поворота
+									if ((i_max==0) and (i2_max==1)) or ((i_max==1) and (i2_max==0)):
+										coord_y = new_l[random.randint(0, 1)]
+										if (coord_y==new_l[1]):
+											coord_y=-coord_y
+										coord_x=0
+									else:
 										if ((i_max==0) and (i2_max==2)) or ((i_max==2) and (i2_max==0)):
-											coord_x = new_l[0]
-											coord_y = new_l[2]
+											coord_x = -new_l[2]
+											coord_y = new_l[0]
 										else:
 											if ((i_max==0) and (i2_max==3)) or ((i_max==3) and (i2_max==0)):
-												coord_x = new_l[0]
-												coord_y = -new_l[3]
+												coord_x = new_l[3]
+												coord_y = new_l[0]
 											else:
 												if ((i_max==1) and (i2_max==2)) or ((i_max==2) and (i2_max==1)):
-													coord_x = -new_l[1]
-													coord_y = new_l[2]
+													coord_x = -new_l[2]
+													coord_y = -new_l[1]
 												else:
 													if ((i_max==1) and (i2_max==3)) or ((i_max==3) and (i2_max==1)):
-														coord_x = -new_l[1]
-														coord_y = -new_l[3]
+														coord_x = new_l[3]
+														coord_y = -new_l[1]
 													else:
-														coord_y = new_l[random.randint(2, 3)]
-														if (coord_y==new_l[3]):
-															coord_y=-coord_y
-														coord_x=0
+														coord_x = new_l[random.randint(2, 3)]
+														if (coord_x==new_l[2]):
+															coord_x=-coord_x
+														coord_y=0
 								else:
-									if min_m_i==3: # поворот на 180 гр. (по кругу)
+									if min_m_i==2: # поворот на 90 гр. вправо (по кругу)
 										if ((i_max==0) and (i2_max==1)) or ((i_max==1) and (i2_max==0)):
-											coord_y = new_l[random.randint(0, 1)]
-											if (coord_y==new_l[0]):
-												coord_y=-coord_y
-											coord_x=0
+											coord_x = new_l[random.randint(0, 1)]
+											if (coord_x==new_l[1]):
+												coord_x=-coord_x
+											coord_y=0
 										else:
 											if ((i_max==0) and (i2_max==2)) or ((i_max==2) and (i2_max==0)):
-												coord_x = new_l[2]
-												coord_y = -new_l[0]
+												coord_x = new_l[0]
+												coord_y = new_l[2]
 											else:
 												if ((i_max==0) and (i2_max==3)) or ((i_max==3) and (i2_max==0)):
-													coord_x = -new_l[3]
-													coord_y = -new_l[0]
+													coord_x = new_l[0]
+													coord_y = -new_l[3]
 												else:
 													if ((i_max==1) and (i2_max==2)) or ((i_max==2) and (i2_max==1)):
-														coord_x = new_l[2]
-														coord_y = new_l[1]
+														coord_x = -new_l[1]
+														coord_y = new_l[2]
 													else:
 														if ((i_max==1) and (i2_max==3)) or ((i_max==3) and (i2_max==1)):
-															coord_x = -new_l[3]
-															coord_y = new_l[1]
+															coord_x = -new_l[1]
+															coord_y = -new_l[3]
 														else:
-															coord_x = new_l[random.randint(2, 3)]
-															if (coord_x==new_l[3]):
-																coord_x=-coord_x
-															coord_y=0
+															coord_y = new_l[random.randint(2, 3)]
+															if (coord_y==new_l[3]):
+																coord_y=-coord_y
+															coord_x=0
 									else:
-										if min_m_i==4: # поворот на 90 гр. влево (по кругу)
+										if min_m_i==3: # поворот на 180 гр. (по кругу)
 											if ((i_max==0) and (i2_max==1)) or ((i_max==1) and (i2_max==0)):
-												coord_x = new_l[random.randint(0, 1)]
-												if (coord_x==new_l[0]):
-													coord_x=-coord_x
-												coord_y=0
+												coord_y = new_l[random.randint(0, 1)]
+												if (coord_y==new_l[0]):
+													coord_y=-coord_y
+												coord_x=0
 											else:
 												if ((i_max==0) and (i2_max==2)) or ((i_max==2) and (i2_max==0)):
-													coord_x = -new_l[0]
-													coord_y = -new_l[2]
+													coord_x = new_l[2]
+													coord_y = -new_l[0]
 												else:
 													if ((i_max==0) and (i2_max==3)) or ((i_max==3) and (i2_max==0)):
-														coord_x = -new_l[0]
-														coord_y = new_l[3]
+														coord_x = -new_l[3]
+														coord_y = -new_l[0]
 													else:
 														if ((i_max==1) and (i2_max==2)) or ((i_max==2) and (i2_max==1)):
-															coord_x = new_l[1]
-															coord_y = -new_l[2]
+															coord_x = new_l[2]
+															coord_y = new_l[1]
 														else:
 															if ((i_max==1) and (i2_max==3)) or ((i_max==3) and (i2_max==1)):
-																coord_x = new_l[1]
-																coord_y = new_l[3]
+																coord_x = -new_l[3]
+																coord_y = new_l[1]
 															else:
-																coord_y = new_l[random.randint(2, 3)]
-																if (coord_y==new_l[2]):
-																	coord_y=-coord_y
-																coord_x=0
+																coord_x = new_l[random.randint(2, 3)]
+																if (coord_x==new_l[3]):
+																	coord_x=-coord_x
+																coord_y=0
+										else:
+											if min_m_i==4: # поворот на 90 гр. влево (по кругу)
+												if ((i_max==0) and (i2_max==1)) or ((i_max==1) and (i2_max==0)):
+													coord_x = new_l[random.randint(0, 1)]
+													if (coord_x==new_l[0]):
+														coord_x=-coord_x
+													coord_y=0
+												else:
+													if ((i_max==0) and (i2_max==2)) or ((i_max==2) and (i2_max==0)):
+														coord_x = -new_l[0]
+														coord_y = -new_l[2]
+													else:
+														if ((i_max==0) and (i2_max==3)) or ((i_max==3) and (i2_max==0)):
+															coord_x = -new_l[0]
+															coord_y = new_l[3]
+														else:
+															if ((i_max==1) and (i2_max==2)) or ((i_max==2) and (i2_max==1)):
+																coord_x = new_l[1]
+																coord_y = -new_l[2]
+															else:
+																if ((i_max==1) and (i2_max==3)) or ((i_max==3) and (i2_max==1)):
+																	coord_x = new_l[1]
+																	coord_y = new_l[3]
+																else:
+																	coord_y = new_l[random.randint(2, 3)]
+																	if (coord_y==new_l[2]):
+																		coord_y=-coord_y
+																	coord_x=0
 						else:
 							#right
 							new_list.clear()
@@ -714,129 +762,145 @@ while server_works:
 							if min_m_i==0:
 								if min_M_i==1:
 									coord_x=0
-									coord_y=new_l[1]
+									coord_y=-new_l[1]
 								else:
 									if min_M_i==2:
-										coord_x=new_l[2]
+										coord_x=-new_l[2]
 										coord_y=0
 									else:
 										if min_M_i==3:
-											coord_x=new_l[0]
-											coord_y=0
-										else:
 											coord_x=0
-											coord_y=new_l[3]
-							if min_m_i==1: # нет поворота
-								if ((i_max==0) and (i2_max==1)) or ((i_max==1) and (i2_max==0)):
-									coord_y = new_l[random.randint(0, 1)]
-									if (coord_y==new_l[1]):
-										coord_y=-coord_y
-									coord_x=0
-								else:
-									if ((i_max==0) and (i2_max==2)) or ((i_max==2) and (i2_max==0)):
-										coord_x = -new_l[2]
-										coord_y = new_l[0]
-									else:
-										if ((i_max==0) and (i2_max==3)) or ((i_max==3) and (i2_max==0)):
-											coord_x = new_l[3]
-											coord_y = new_l[0]
+											coord_y=new_l[0]
 										else:
-											if ((i_max==1) and (i2_max==2)) or ((i_max==2) and (i2_max==1)):
-												coord_x = -new_l[2]
-												coord_y = -new_l[1]
-											else:
-												if ((i_max==1) and (i2_max==3)) or ((i_max==3) and (i2_max==1)):
-													coord_x = new_l[3]
-													coord_y = -new_l[1]
-												else:
-													coord_x = new_l[random.randint(2, 3)]
-													if (coord_x==new_l[2]):
-														coord_x=-coord_x
-													coord_y=0
-							else:
-								if min_m_i==2: # поворот на 90 гр. вправо (по кругу)
-									if ((i_max==0) and (i2_max==1)) or ((i_max==1) and (i2_max==0)):
-										coord_x = new_l[random.randint(0, 1)]
-										if (coord_x==new_l[1]):
-											coord_x=-coord_x
+											coord_x=new_l[3]
+											coord_y=0
+							if min_M_i==0:
+								if min_m_i==1:
+									coord_x=0
+									coord_y=new_l[0]
+								else:
+									if min_m_i==2:
+										coord_x=new_l[3]
 										coord_y=0
 									else:
+										if min_m_i==3:
+											coord_x=0
+											coord_y=-new_l[1]
+										else:
+											coord_x=-new_l[2]
+											coord_y=0
+							else:
+								if min_m_i==1: # нет поворота
+									if ((i_max==0) and (i2_max==1)) or ((i_max==1) and (i2_max==0)):
+										coord_y = new_l[random.randint(0, 1)]
+										if (coord_y==new_l[1]):
+											coord_y=-coord_y
+										coord_x=0
+									else:
 										if ((i_max==0) and (i2_max==2)) or ((i_max==2) and (i2_max==0)):
-											coord_x = new_l[0]
-											coord_y = new_l[2]
+											coord_x = -new_l[2]
+											coord_y = new_l[0]
 										else:
 											if ((i_max==0) and (i2_max==3)) or ((i_max==3) and (i2_max==0)):
-												coord_x = new_l[0]
-												coord_y = -new_l[3]
+												coord_x = new_l[3]
+												coord_y = new_l[0]
 											else:
 												if ((i_max==1) and (i2_max==2)) or ((i_max==2) and (i2_max==1)):
-													coord_x = -new_l[1]
-													coord_y = new_l[2]
+													coord_x = -new_l[2]
+													coord_y = -new_l[1]
 												else:
 													if ((i_max==1) and (i2_max==3)) or ((i_max==3) and (i2_max==1)):
-														coord_x = -new_l[1]
-														coord_y = -new_l[3]
+														coord_x = new_l[3]
+														coord_y = -new_l[1]
 													else:
-														coord_y = new_l[random.randint(2, 3)]
-														if (coord_y==new_l[3]):
-															coord_y=-coord_y
-														coord_x=0
+														coord_x = new_l[random.randint(2, 3)]
+														if (coord_x==new_l[2]):
+															coord_x=-coord_x
+														coord_y=0
 								else:
-									if min_m_i==3: # поворот на 180 гр. (по кругу)
+									if min_m_i==2: # поворот на 90 гр. вправо (по кругу)
 										if ((i_max==0) and (i2_max==1)) or ((i_max==1) and (i2_max==0)):
-											coord_y = new_l[random.randint(0, 1)]
-											if (coord_y==new_l[0]):
-												coord_y=-coord_y
-											coord_x=0
+											coord_x = new_l[random.randint(0, 1)]
+											if (coord_x==new_l[1]):
+												coord_x=-coord_x
+											coord_y=0
 										else:
 											if ((i_max==0) and (i2_max==2)) or ((i_max==2) and (i2_max==0)):
-												coord_x = new_l[2]
-												coord_y = -new_l[0]
+												coord_x = new_l[0]
+												coord_y = new_l[2]
 											else:
 												if ((i_max==0) and (i2_max==3)) or ((i_max==3) and (i2_max==0)):
-													coord_x = -new_l[3]
-													coord_y = -new_l[0]
+													coord_x = new_l[0]
+													coord_y = -new_l[3]
 												else:
 													if ((i_max==1) and (i2_max==2)) or ((i_max==2) and (i2_max==1)):
-														coord_x = new_l[2]
-														coord_y = new_l[1]
+														coord_x = -new_l[1]
+														coord_y = new_l[2]
 													else:
 														if ((i_max==1) and (i2_max==3)) or ((i_max==3) and (i2_max==1)):
-															coord_x = -new_l[3]
-															coord_y = new_l[1]
+															coord_x = -new_l[1]
+															coord_y = -new_l[3]
 														else:
-															coord_x = new_l[random.randint(2, 3)]
-															if (coord_x==new_l[3]):
-																coord_x=-coord_x
-															coord_y=0
+															coord_y = new_l[random.randint(2, 3)]
+															if (coord_y==new_l[3]):
+																coord_y=-coord_y
+															coord_x=0
 									else:
-										if min_m_i==4: # поворот на 90 гр. влево (по кругу)
+										if min_m_i==3: # поворот на 180 гр. (по кругу)
 											if ((i_max==0) and (i2_max==1)) or ((i_max==1) and (i2_max==0)):
-												coord_x = new_l[random.randint(0, 1)]
-												if (coord_x==new_l[0]):
-													coord_x=-coord_x
-												coord_y=0
+												coord_y = new_l[random.randint(0, 1)]
+												if (coord_y==new_l[0]):
+													coord_y=-coord_y
+												coord_x=0
 											else:
 												if ((i_max==0) and (i2_max==2)) or ((i_max==2) and (i2_max==0)):
-													coord_x = -new_l[0]
-													coord_y = -new_l[2]
+													coord_x = new_l[2]
+													coord_y = -new_l[0]
 												else:
 													if ((i_max==0) and (i2_max==3)) or ((i_max==3) and (i2_max==0)):
-														coord_x = -new_l[0]
-														coord_y = new_l[3]
+														coord_x = -new_l[3]
+														coord_y = -new_l[0]
 													else:
 														if ((i_max==1) and (i2_max==2)) or ((i_max==2) and (i2_max==1)):
-															coord_x = new_l[1]
-															coord_y = -new_l[2]
+															coord_x = new_l[2]
+															coord_y = new_l[1]
 														else:
 															if ((i_max==1) and (i2_max==3)) or ((i_max==3) and (i2_max==1)):
-																coord_x = new_l[1]
-																coord_y = new_l[3]
+																coord_x = -new_l[3]
+																coord_y = new_l[1]
 															else:
-																coord_y = new_l[random.randint(2, 3)]
-																if (coord_y==new_l[2]):
-																	coord_y=-coord_y
-																coord_x=0
+																coord_x = new_l[random.randint(2, 3)]
+																if (coord_x==new_l[3]):
+																	coord_x=-coord_x
+																coord_y=0
+										else:
+											if min_m_i==4: # поворот на 90 гр. влево (по кругу)
+												if ((i_max==0) and (i2_max==1)) or ((i_max==1) and (i2_max==0)):
+													coord_x = new_l[random.randint(0, 1)]
+													if (coord_x==new_l[0]):
+														coord_x=-coord_x
+													coord_y=0
+												else:
+													if ((i_max==0) and (i2_max==2)) or ((i_max==2) and (i2_max==0)):
+														coord_x = -new_l[0]
+														coord_y = -new_l[2]
+													else:
+														if ((i_max==0) and (i2_max==3)) or ((i_max==3) and (i2_max==0)):
+															coord_x = -new_l[0]
+															coord_y = new_l[3]
+														else:
+															if ((i_max==1) and (i2_max==2)) or ((i_max==2) and (i2_max==1)):
+																coord_x = new_l[1]
+																coord_y = -new_l[2]
+															else:
+																if ((i_max==1) and (i2_max==3)) or ((i_max==3) and (i2_max==1)):
+																	coord_x = new_l[1]
+																	coord_y = new_l[3]
+																else:
+																	coord_y = new_l[random.randint(2, 3)]
+																	if (coord_y==new_l[2]):
+																		coord_y=-coord_y
+																	coord_x=0
 
 				data=[coord_x, coord_y]
 				player.change_speed(data)
